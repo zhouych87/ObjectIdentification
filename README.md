@@ -1,27 +1,33 @@
-**Data**
+# Data
 
-data2.csv is the experiment data file. It includes 17 columns.
+*.csv files are the experiment data file. 
 
-1-4 columns are the signal before grasp 
+**For one grasping**
 
-5-8 columns are the signal after the grasp 
+1-4 colums are the signal difference of the grasping
 
-9-12 columns are the signal after releasing 
+5 colum is the object shape: 1 for ball, 2 for cone, 3 for cuboid
 
-13-16 columns are the signal after the second grasp 
+**For two grasping**
 
-17 column is the object shape: 1 for ball, 2 for cone, 3 for cuboid
+1-4 colums and 5-8 colums are the signal difference of the first grasping and the second grasping
+
+9 column is the object shape: 1 for ball, 2 for cone, 3 for cuboid
 
 
-**How to use**
+# How to use
 
 please install scikit-learn library
 
-_pip install scikit-learn_
+`pip install scikit-learn`
 
 and then just 
+```
+python NN_rdm0.py onegrasp.csv    # For first 45 graspings of each object are used to train, last 5 of each object for testing.  
+python NN_rdm0.py twograsp.csv    # For first 45 graspings of each object are used to train, last 5 of each object for testing.  
 
-_python NN.py_
-
+python NN.py onegrasp.csv    # mix all of them, and randowm split the whole set into traning and testing set with ratio 9:1   
+python NN.py twograsp.csv     # mix all of them, and randowm split the whole set into traning and testing set with ratio 9:1   
+```
 
 
