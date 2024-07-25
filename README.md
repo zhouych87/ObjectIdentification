@@ -1,6 +1,6 @@
 # Data
 
-*.csv files are the experiment data file. 
+*.csv files are the recorded experiment data files. 
 
 **For one grasping**
 
